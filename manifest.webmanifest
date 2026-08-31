@@ -1,7 +1,7 @@
 {
-  "name": "WordBank Prep \u2014 SAT & ACT Vocabulary",
+  "name": "WordBank Prep \u2014 SAT & ACT Practice",
   "short_name": "WordBank",
-  "description": "4,402 SAT and ACT vocabulary words with spaced-repetition flashcards, quizzes, and a matching game. Works offline.",
+  "description": "4,402 SAT/ACT vocabulary words with spaced repetition and 431 verified grammar questions. Works offline.",
   "start_url": "./?source=pwa",
   "scope": "./",
   "display": "standalone",
@@ -43,7 +43,17 @@
   "shortcuts": [
     {
       "name": "Flashcards",
-      "url": "./?source=pwa",
+      "url": "./?source=pwa#/vocab/flashcards",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Grammar practice",
+      "url": "./?source=pwa#/grammar",
       "icons": [
         {
           "src": "icon-192.png",

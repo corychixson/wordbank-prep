@@ -1,12 +1,13 @@
 /* WordBank Prep service worker — offline-first app shell */
-const VERSION = 'ce16ed5298';
+const VERSION = '53917fcc3f';
 const CACHE = 'wordbank-' + VERSION;
 const ASSETS = [
   "./",
   "./index.html",
-  "./app.css?v=ce16ed5298",
-  "./app.js?v=ce16ed5298",
+  "./app.css?v=53917fcc3f",
+  "./app.js?v=53917fcc3f",
   "./words.43e7b2491f.json",
+  "./skills.95e9578aca.json",
   "./manifest.webmanifest",
   "./icon-192.png",
   "./icon-512.png",
@@ -42,14 +43,14 @@ self.addEventListener('fetch', e => {
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
 
-  // Navigations: try the network briefly so a fresh deploy shows up, fall back to the cached shell.
+  // Navigations: network first so a fresh deploy shows up, falling back to the precached shell.
+  // The fresh page is deliberately NOT written into this cache: the precache is a consistent
+  // versioned set (index.html + the app.js/app.css it references), and mixing a newer page with
+  // older scripts is the one way an offline boot could break.
   if (req.mode === 'navigate') {
     e.respondWith((async () => {
       try {
-        const fresh = await fetch(req);
-        const cache = await caches.open(CACHE);
-        cache.put('./index.html', fresh.clone());
-        return fresh;
+        return await fetch(req);
       } catch (err) {
         const cache = await caches.open(CACHE);
         return (await cache.match('./index.html')) || (await cache.match('./')) || Response.error();
@@ -61,16 +62,10 @@ self.addEventListener('fetch', e => {
   // Everything else: cache first (all app assets are content-versioned), then network.
   e.respondWith((async () => {
     const cache = await caches.open(CACHE);
-    const hit = await cache.match(req, {ignoreSearch: false});
+    const hit = await cache.match(req);
     if (hit) return hit;
-    try {
-      const res = await fetch(req);
-      if (res && res.status === 200 && res.type === 'basic') cache.put(req, res.clone());
-      return res;
-    } catch (err) {
-      const loose = await cache.match(req, {ignoreSearch: true});
-      if (loose) return loose;
-      throw err;
-    }
+    const res = await fetch(req);
+    if (res && res.status === 200 && res.type === 'basic') cache.put(req, res.clone());
+    return res;
   })());
 });

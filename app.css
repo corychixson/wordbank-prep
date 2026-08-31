@@ -414,3 +414,65 @@ html.kb-open .bnav{display:none}
 
 .ch-box .row{flex-wrap:nowrap}
 @media(max-width:400px){ .ch-box .row .btn{font-size:14px} }
+
+/* ============================================================
+   Platform additions: sub-tabs, focus selector, home cards,
+   skill mastery, drills
+   ============================================================ */
+.vsub{display:none}
+.vsub.active{display:block}
+.subtabs{display:flex;gap:4px;background:var(--surface-2);padding:4px;border-radius:12px;margin-bottom:12px;overflow-x:auto}
+.vtab{flex:1;border:0;background:transparent;padding:8px 10px;border-radius:9px;font-weight:600;color:var(--muted);white-space:nowrap}
+.vtab.active{background:var(--surface);color:var(--primary);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.filterbar{border:1px solid var(--border);border-radius:12px;margin-bottom:14px}
+.focus-seg button{padding:6px 10px}
+.topbar-actions .focus-seg{margin-right:4px}
+.dgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:16px}
+.dcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;display:flex;flex-direction:column;gap:6px}
+.dcard.ready{cursor:pointer}
+.dcard.ready:hover{border-color:var(--primary)}
+.dcard.soon{opacity:.72}
+.dcard h3{margin:2px 0 0;font-size:19px}
+.dcard p{margin:0;font-size:13.5px}
+.dcard-top{display:flex;justify-content:space-between;align-items:center}
+.dicon{font-size:26px;line-height:1}
+.dstats{display:flex;gap:14px;font-size:13px;color:var(--muted);margin:6px 0 4px}
+.dstats b{color:var(--text);font-size:15px}
+.dcard .btn{align-self:flex-start;margin-top:auto}
+.skillgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px 18px;margin-top:8px}
+.skillrow{padding:6px 0}
+.skillrow-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:5px}
+.skillname{font-weight:600;font-size:14.5px}
+.skillbar{height:8px;background:var(--surface-3);border-radius:99px;overflow:hidden}
+.skillbar i{display:block;height:100%;border-radius:99px;background:var(--primary);transition:width .4s}
+.skillbar i.lv-mastered{background:var(--success)} .skillbar i.lv-solid{background:var(--tier2)} .skillbar i.lv-needs-work{background:var(--danger)} .skillbar i.lv-learning{background:var(--warn)}
+.skillmeta{font-size:12.5px;color:var(--muted);margin-top:4px}
+.linkbtn.sm{font-size:12.5px;padding:0 2px}
+.badge.lv-new{background:var(--surface-2);color:var(--muted)} .badge.lv-learning{background:var(--warn-soft);color:var(--warn)} .badge.lv-needs-work{background:var(--danger-soft);color:var(--danger)} .badge.lv-solid{background:var(--tier2-soft);color:var(--tier2)} .badge.lv-mastered{background:var(--success-soft);color:var(--success)}
+.domainblock{margin-top:8px}
+.domainblock h3{margin:6px 0 2px;font-size:16px}
+.dr-prompt{font-size:13.5px;color:var(--muted);margin:10px 0 0;font-weight:600}
+.dr-stem{font-family:var(--serif);font-size:19px;line-height:1.6}
+.dr-stem mark.fill{background:var(--success-soft);color:var(--success);font-weight:700;padding:0 4px;border-radius:5px}
+.feedback .why{margin-top:10px}
+.feedback .why summary{cursor:pointer;font-weight:600;color:var(--text)}
+.feedback .why ul{margin:8px 0 0;padding-left:18px;color:var(--text)}
+.feedback .why li{margin:4px 0}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;margin-top:8px}
+.tbl th,.tbl td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--border)}
+.tbl th{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+details.missed{border-top:1px solid var(--border);padding:10px 0}
+details.missed summary{cursor:pointer;font-family:var(--serif);font-size:16px;line-height:1.5}
+details.missed .exp{margin-top:8px;color:var(--muted);font-size:14px}
+#homeWeak h3{margin:0 0 8px;font-size:16px}
+@media(max-width:820px){
+  .topbar-actions .focus-seg{display:none}
+  .dgrid{grid-template-columns:1fr 1fr}
+  .dcard{padding:14px}
+  .dcard h3{font-size:17px}
+  .dstats{gap:10px;flex-wrap:wrap}
+  .skillgrid{grid-template-columns:1fr}
+  .dr-stem{font-size:17px}
+  .filterbar{border:0;border-radius:0;margin:0 -12px 12px;border-bottom:1px solid var(--border)}
+}
+@media(max-width:480px){ .dgrid{grid-template-columns:1fr} }

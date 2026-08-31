@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>WordBank Prep — SAT &amp; ACT Vocabulary</title>
-<meta name="description" content="Study 4,402 SAT and ACT vocabulary words free: spaced-repetition flashcards, quizzes, and a matching game. Installs on your phone and works offline.">
+<title>WordBank Prep — SAT &amp; ACT Practice</title>
+<meta name="description" content="Free SAT and ACT practice: 4,402 vocabulary words with spaced-repetition flashcards, 431 verified grammar questions with worked explanations, quizzes, and a matching game. Installs on your phone and works offline.">
 <link rel="canonical" href="https://corychixson.github.io/wordbank-prep/">
 <meta name="theme-color" content="#ffffff" id="themeColor">
 <meta name="color-scheme" content="light dark">
 <meta property="og:type" content="website">
-<meta property="og:title" content="WordBank Prep — SAT &amp; ACT Vocabulary">
-<meta property="og:description" content="4,402 SAT and ACT vocabulary words with definitions, example sentences, and synonyms. Flashcards, quizzes, and a matching game. Free, installs on your phone, works offline.">
+<meta property="og:title" content="WordBank Prep — SAT &amp; ACT Practice">
+<meta property="og:description" content="4,402 vocabulary words and 431 verified grammar questions with worked explanations. Spaced-repetition flashcards, skill drills, quizzes. Free, installs on your phone, works offline.">
 <meta property="og:url" content="https://corychixson.github.io/wordbank-prep/">
 <meta property="og:image" content="https://corychixson.github.io/wordbank-prep/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="WordBank Prep — SAT &amp; ACT Vocabulary">
-<meta name="twitter:description" content="4,402 words, flashcards with spaced repetition, quizzes, and a matching game. Free and works offline.">
+<meta name="twitter:title" content="WordBank Prep — SAT &amp; ACT Practice">
+<meta name="twitter:description" content="4,402 words, 431 verified grammar questions, spaced repetition, quizzes. Free and works offline.">
 <meta name="twitter:image" content="https://corychixson.github.io/wordbank-prep/og-image.png">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -28,120 +28,58 @@
 <meta name="apple-mobile-web-app-title" content="WordBank">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="format-detection" content="telephone=no">
-<link rel="stylesheet" href="app.css?v=ce16ed5298">
-<script defer src="app.js?v=ce16ed5298"></script>
+<link rel="stylesheet" href="app.css?v=53917fcc3f">
+<script defer src="app.js?v=53917fcc3f"></script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"WordBank Prep","url":"https://corychixson.github.io/wordbank-prep/","applicationCategory":"EducationalApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"4,402 SAT and ACT vocabulary words with spaced-repetition flashcards, quizzes, and a matching game."}
+{"@context":"https://schema.org","@type":"WebApplication","name":"WordBank Prep","url":"https://corychixson.github.io/wordbank-prep/","applicationCategory":"EducationalApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"SAT and ACT practice: 4,402 vocabulary words with spaced repetition and 431 verified grammar questions with worked explanations."}
 </script>
 </head>
 <body>
-<div id="splash">
-  <div class="splash-inner">
-    <div class="splash-logo">Wb</div>
-    <h1>WordBank Prep</h1>
-    <p>SAT &amp; ACT vocabulary</p>
-    <div class="splash-dots"><i></i><i></i><i></i></div>
-  </div>
-</div>
-
+<div id="splash"><div class="splash-inner"><div class="splash-logo">Wb</div><h1>WordBank Prep</h1><p>SAT &amp; ACT practice</p><div class="splash-dots"><i></i><i></i><i></i></div></div></div>
 <a class="skip" href="#main">Skip to content</a>
 
 <div class="statusbars">
-  <div class="statusbar offline" id="offlineBar" hidden>You're offline — everything still works, and your progress is saved on this device.</div>
+  <div class="statusbar offline" id="offlineBar" hidden>You're offline — everything you've opened still works, and your progress is saved on this device.</div>
   <div class="statusbar update" id="updateBar" hidden>A new version is ready. <button class="linkbtn" id="updateBtn">Refresh now</button></div>
 </div>
 
 <header class="topbar">
   <div class="brand">
     <div class="logo" aria-hidden="true">Wb</div>
-    <div>
-      <h1>WordBank Prep</h1>
-      <p class="sub"><span id="brandCount">4,400+</span> SAT &amp; ACT words · flashcards · quizzes · offline</p>
-    </div>
+    <div><h1>WordBank Prep</h1><p class="sub">SAT &amp; ACT practice · vocabulary · grammar · offline</p></div>
   </div>
-  <nav class="tabs" role="tablist" aria-label="Study modes">
-    <button class="tab active" role="tab" data-view="flashcards" aria-selected="true">Flashcards</button>
-    <button class="tab" role="tab" data-view="quiz" aria-selected="false">Quiz</button>
-    <button class="tab" role="tab" data-view="match" aria-selected="false">Match</button>
-    <button class="tab" role="tab" data-view="list" aria-selected="false">Word List</button>
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button class="tab active" role="tab" data-view="home" aria-selected="true">Home</button>
+    <button class="tab" role="tab" data-view="vocab" aria-selected="false">Vocab</button>
+    <button class="tab" role="tab" data-view="grammar" aria-selected="false">Grammar</button>
     <button class="tab" role="tab" data-view="progress" aria-selected="false">Progress</button>
   </nav>
   <div class="topbar-actions">
+    <div class="seg focus-seg" role="group" aria-label="Studying for"><button data-focus="sat">SAT</button><button data-focus="act">ACT</button><button data-focus="both" class="on">Both</button></div>
     <button class="btn sm install" id="installBtn" hidden>⤓ Install app</button>
-    <button class="iconbtn" id="helpBtn" aria-label="Help and keyboard shortcuts" title="Help">?</button>
+    <button class="iconbtn" id="helpBtn" aria-label="Help" title="Help">?</button>
     <button class="iconbtn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
   </div>
 </header>
 
-<section class="filterbar" aria-label="Word filters" id="filterbar">
-  <button class="chip ftoggle" id="filterToggle" aria-expanded="false" aria-controls="filterbar">Filters ▾</button>
-  <div class="fgroup" id="tierChips">
-    <span class="flabel">Tier</span>
-    <button class="chip t1 on" data-tier="1" aria-pressed="true">Core <span class="n" data-count="t1"></span></button>
-    <button class="chip t2 on" data-tier="2" aria-pressed="true">Extended <span class="n" data-count="t2"></span></button>
-    <button class="chip t3 on" data-tier="3" aria-pressed="true">Advanced <span class="n" data-count="t3"></span></button>
-  </div>
-  <div class="fgroup">
-    <span class="flabel">Test</span>
-    <div class="seg" id="testSeg" role="group" aria-label="Test focus">
-      <button data-test="both" class="on">SAT &amp; ACT</button>
-      <button data-test="sat">SAT</button>
-      <button data-test="act">ACT</button>
-    </div>
-  </div>
-  <div class="fgroup popwrap">
-    <button class="chip" id="letterBtn" aria-haspopup="true" aria-expanded="false">Letters: <span id="letterLbl">All</span> ▾</button>
-    <div class="popover" id="letterPop" hidden>
-      <div class="row" id="letterRow"></div>
-      <div class="row"><button class="btn sm" data-letters="all">All</button><button class="btn sm" data-letters="none">None</button><span class="muted small">Tip: pick a few letters to study in alphabetical chunks.</span></div>
-    </div>
-  </div>
-  <div class="fgroup popwrap">
-    <button class="chip" id="moreBtn" aria-haspopup="true" aria-expanded="false">More ▾</button>
-    <div class="popover" id="morePop" hidden>
-      <div class="poptitle">Part of speech</div>
-      <div class="row" id="posRow">
-        <button class="chip on" data-pos="adj" aria-pressed="true">Adjectives</button>
-        <button class="chip on" data-pos="n" aria-pressed="true">Nouns</button>
-        <button class="chip on" data-pos="v" aria-pressed="true">Verbs</button>
-        <button class="chip on" data-pos="other" aria-pressed="true">Other</button>
-      </div>
-      <div class="poptitle">Your progress</div>
-      <div class="row" id="statusRow">
-        <button class="chip on" data-status="new" aria-pressed="true">New</button>
-        <button class="chip on" data-status="learning" aria-pressed="true">Learning</button>
-        <button class="chip on" data-status="known" aria-pressed="true">Known</button>
-        <button class="chip on" data-status="mastered" aria-pressed="true">Mastered</button>
-      </div>
-    </div>
-  </div>
-  <div class="fcount"><b id="filterCount">0</b> words · <button class="linkbtn" id="resetFilters">Reset filters</button></div>
-</section>
-
 <main id="main">
 
-  <!-- ================= FLASHCARDS ================= -->
-  <section id="view-flashcards" class="view active" role="tabpanel">
-    <div class="welcome" id="welcome">
-      <h2>Welcome! Where would you like to start?</h2>
-      <p>WordBank Prep holds every word a student is likely to meet on the major SAT and ACT vocabulary lists, sorted into three priority tiers. Pick a starting point — you can change it any time.</p>
+  <!-- ================= HOME ================= -->
+  <section id="view-home" class="view active" role="tabpanel">
+    <div class="welcome" id="onboard">
+      <h2>What are you studying for?</h2>
+      <p>WordBank Prep maps every skill on both tests. Your choice filters what you see and labels each section the way your test does. You can change it any time from the top bar.</p>
       <div class="startgrid">
-        <button class="startcard" data-start="1"><b>Start with Core</b><span><span data-count="t1"></span> highest-frequency words tested again and again on the SAT &amp; ACT. Master these first.</span></button>
-        <button class="startcard" data-start="12"><b>Core + Extended</b><span><span data-count="t12"></span> words — the full set found on standard SAT/ACT prep lists.</span></button>
-        <button class="startcard" data-start="123"><b>Everything</b><span><span data-count="all"></span> words including advanced vocabulary for students aiming for top scores.</span></button>
+        <button class="startcard" data-focus="sat"><b>The SAT</b><span>Digital SAT: Reading &amp; Writing and Math, adaptive modules.</span></button>
+        <button class="startcard" data-focus="act"><b>The ACT</b><span>English, Math, Reading, plus optional Science and Writing.</span></button>
+        <button class="startcard" data-focus="both"><b>Both</b><span>See everything. Skills that only one test uses are labeled.</span></button>
       </div>
     </div>
 
     <div class="panel install-card" id="installCard" hidden>
       <div class="row between">
-        <div>
-          <h2>Put WordBank on your home screen</h2>
-          <p class="lead">Install it once and it opens full-screen with its own icon — and keeps working with no internet, so you can study on the bus.</p>
-        </div>
-        <div class="row">
-          <button class="btn primary" id="installCardBtn">Install app</button>
-          <button class="btn ghost sm" id="installDismiss">Not now</button>
-        </div>
+        <div><h2>Put WordBank on your home screen</h2><p class="lead">Install it once and it opens full-screen with its own icon — and keeps working with no internet, so you can study on the bus.</p></div>
+        <div class="row"><button class="btn primary" id="installCardBtn">Install app</button><button class="btn ghost sm" id="installDismiss">Not now</button></div>
       </div>
     </div>
 
@@ -150,286 +88,220 @@
         <div class="goalring" id="goalRing"></div>
         <div class="grow">
           <div id="goalLabel" class="goaltext"></div>
-          <label class="opt small">Daily goal
-            <select class="sel sm" id="goalSel">
-              <option value="10">10 reviews</option>
-              <option value="20">20 reviews</option>
-              <option value="30">30 reviews</option>
-              <option value="50">50 reviews</option>
-              <option value="100">100 reviews</option>
-            </select>
-          </label>
+          <div class="row"><label class="opt small">Daily goal
+            <select class="sel sm" id="goalSel"><option value="10">10 reviews</option><option value="20">20 reviews</option><option value="30">30 reviews</option><option value="50">50 reviews</option><option value="100">100 reviews</option></select>
+          </label><span class="small muted" id="homeStreak"></span><span class="small muted">Studying for</span><div class="seg focus-seg-home" role="group" aria-label="Studying for"><button data-focus="sat">SAT</button><button data-focus="act">ACT</button><button data-focus="both" class="on">Both</button></div></div>
         </div>
       </div>
     </div>
 
-    <div class="panel fc-setup" id="fcSetup">
-      <h2>Flashcards</h2>
-      <p class="lead">Flip the card, then rate how well you knew it. Words you miss come back sooner; words you know come back later (spaced repetition).</p>
-      <div class="row">
-        <label class="opt">Deck
-          <select class="sel" id="fcDeck">
-            <option value="smart">Smart review (due words + new words)</option>
-            <option value="new">New words only</option>
-            <option value="due">Due for review</option>
-            <option value="missed">Words I've missed</option>
-            <option value="all">Everything selected (shuffled)</option>
-          </select>
-        </label>
-        <label class="opt">Session size
-          <select class="sel" id="fcSize">
-            <option value="10">10 cards</option>
-            <option value="20" selected>20 cards</option>
-            <option value="30">30 cards</option>
-            <option value="50">50 cards</option>
-            <option value="100">100 cards</option>
-            <option value="all">All</option>
-          </select>
-        </label>
-        <label class="opt">Front of card
-          <select class="sel" id="fcFront">
-            <option value="word">Word</option>
-            <option value="def">Definition</option>
-            <option value="ex">Example sentence</option>
-          </select>
-        </label>
-        <button class="btn primary lg" id="fcStart">Start session</button>
-      </div>
-      <div class="deckinfo" id="fcDeckInfo"></div>
-    </div>
+    <div class="dgrid" id="domainGrid"></div>
+    <div class="panel" id="homeWeak"></div>
+  </section>
 
-    <div class="fc-stage" id="fcStage" hidden>
-      <div class="fc-progress">
-        <span id="fcCounter">1 / 20</span>
-        <div class="pbar"><div id="fcBar"></div></div>
-        <span id="fcQueueInfo"></span>
-        <button class="btn sm ghost" id="fcEnd">End session</button>
+  <!-- ================= VOCAB ================= -->
+  <section id="view-vocab" class="view" role="tabpanel">
+    <nav class="subtabs" aria-label="Vocabulary modes">
+      <button class="vtab active" data-sub="flashcards">Flashcards</button>
+      <button class="vtab" data-sub="quiz">Quiz</button>
+      <button class="vtab" data-sub="match">Match</button>
+      <button class="vtab" data-sub="list">Word list</button>
+    </nav>
+
+    <section class="filterbar" aria-label="Word filters" id="filterbar">
+      <button class="chip ftoggle" id="filterToggle" aria-expanded="false" aria-controls="filterbar">Filters ▾</button>
+      <div class="fgroup" id="tierChips">
+        <span class="flabel">Tier</span>
+        <button class="chip t1 on" data-tier="1" aria-pressed="true">Core <span class="n" data-count="t1"></span></button>
+        <button class="chip t2 on" data-tier="2" aria-pressed="true">Extended <span class="n" data-count="t2"></span></button>
+        <button class="chip t3 on" data-tier="3" aria-pressed="true">Advanced <span class="n" data-count="t3"></span></button>
       </div>
-      <div class="cardwrap">
-        <div class="card" id="fcCard" tabindex="0" role="button" aria-label="Flashcard. Press space or click to flip. Swipe right if you knew it, left if you missed it.">
-          <div class="swipe-tint" id="swipeHint"></div>
-          <div class="card-inner">
-            <div class="card-face front" id="fcFrontFace"></div>
-            <div class="card-face back" id="fcBackFace"></div>
+      <div class="fgroup popwrap">
+        <button class="chip" id="letterBtn" aria-haspopup="true" aria-expanded="false">Letters: <span id="letterLbl">All</span> ▾</button>
+        <div class="popover" id="letterPop" hidden>
+          <div class="row" id="letterRow"></div>
+          <div class="row"><button class="btn sm" data-letters="all">All</button><button class="btn sm" data-letters="none">None</button><span class="muted small">Tip: pick a few letters to study in alphabetical chunks.</span></div>
+        </div>
+      </div>
+      <div class="fgroup popwrap">
+        <button class="chip" id="moreBtn" aria-haspopup="true" aria-expanded="false">More ▾</button>
+        <div class="popover" id="morePop" hidden>
+          <div class="poptitle">Part of speech</div>
+          <div class="row" id="posRow"><button class="chip on" data-pos="adj" aria-pressed="true">Adjectives</button><button class="chip on" data-pos="n" aria-pressed="true">Nouns</button><button class="chip on" data-pos="v" aria-pressed="true">Verbs</button><button class="chip on" data-pos="other" aria-pressed="true">Other</button></div>
+          <div class="poptitle">Your progress</div>
+          <div class="row" id="statusRow"><button class="chip on" data-status="new" aria-pressed="true">New</button><button class="chip on" data-status="learning" aria-pressed="true">Learning</button><button class="chip on" data-status="known" aria-pressed="true">Known</button><button class="chip on" data-status="mastered" aria-pressed="true">Mastered</button></div>
+        </div>
+      </div>
+      <div class="fcount"><b id="filterCount">0</b> words for <span id="focusLbl">SAT &amp; ACT</span> · <button class="linkbtn" id="resetFilters">Reset filters</button></div>
+    </section>
+
+    <!-- flashcards -->
+    <div class="vsub active" id="vsub-flashcards">
+      <div class="welcome" id="welcome">
+        <h2>Where would you like to start?</h2>
+        <p>Every word a student is likely to meet on the major SAT and ACT vocabulary lists, sorted into three priority tiers. Pick a starting point — you can change it any time in the filter bar.</p>
+        <div class="startgrid">
+          <button class="startcard" data-start="1"><b>Start with Core</b><span><span data-count="t1"></span> highest-frequency words tested again and again. Master these first.</span></button>
+          <button class="startcard" data-start="12"><b>Core + Extended</b><span><span data-count="t12"></span> words — the full set found on standard prep lists.</span></button>
+          <button class="startcard" data-start="123"><b>Everything</b><span><span data-count="all"></span> words including advanced vocabulary for top scorers.</span></button>
+        </div>
+      </div>
+      <div class="panel fc-setup" id="fcSetup">
+        <h2>Flashcards</h2>
+        <p class="lead">Flip the card, then rate how well you knew it. Words you miss come back sooner; words you know come back later.</p>
+        <div class="row">
+          <label class="opt">Deck<select class="sel" id="fcDeck"><option value="smart">Smart review (due words + new words)</option><option value="new">New words only</option><option value="due">Due for review</option><option value="missed">Words I've missed</option><option value="all">Everything selected (shuffled)</option></select></label>
+          <label class="opt">Session size<select class="sel" id="fcSize"><option value="10">10 cards</option><option value="20" selected>20 cards</option><option value="30">30 cards</option><option value="50">50 cards</option><option value="100">100 cards</option><option value="all">All</option></select></label>
+          <label class="opt">Front of card<select class="sel" id="fcFront"><option value="word">Word</option><option value="def">Definition</option><option value="ex">Example sentence</option></select></label>
+          <button class="btn primary lg" id="fcStart">Start session</button>
+        </div>
+        <div class="deckinfo" id="fcDeckInfo"></div>
+      </div>
+      <div class="fc-stage" id="fcStage" hidden>
+        <div class="fc-progress"><span id="fcCounter">1 / 20</span><div class="pbar"><div id="fcBar"></div></div><span id="fcQueueInfo"></span><button class="btn sm ghost" id="fcEnd">End session</button></div>
+        <div class="cardwrap">
+          <div class="card" id="fcCard" tabindex="0" role="button" aria-label="Flashcard. Press space or click to flip. Swipe right if you knew it, left if you missed it.">
+            <div class="swipe-tint" id="swipeHint"></div>
+            <div class="card-inner"><div class="card-face front" id="fcFrontFace"></div><div class="card-face back" id="fcBackFace"></div></div>
           </div>
         </div>
+        <div class="fc-actions"><button class="rate again" id="rateAgain">Missed it <kbd>1</kbd></button><button class="rate hard" id="rateHard">Hard <kbd>2</kbd></button><button class="rate good" id="rateGood">Got it <kbd>3</kbd></button></div>
+        <div class="fc-secondary"><button class="btn sm ghost" id="fcFlip">Flip <kbd>Space</kbd></button><button class="btn sm ghost" id="fcUndo">Undo</button><button class="btn sm ghost" id="fcSkip">Skip</button><label class="opt"><input type="checkbox" id="fcAuto"> Auto-flip after 3s</label></div>
+        <p class="swipetip">Tap the card to flip · swipe <b>right</b> if you knew it, <b>left</b> if you missed it</p>
       </div>
-      <div class="fc-actions">
-        <button class="rate again" id="rateAgain">Missed it <kbd>1</kbd></button>
-        <button class="rate hard" id="rateHard">Hard <kbd>2</kbd></button>
-        <button class="rate good" id="rateGood">Got it <kbd>3</kbd></button>
-      </div>
-      <div class="fc-secondary">
-        <button class="btn sm ghost" id="fcFlip">Flip <kbd>Space</kbd></button>
-        <button class="btn sm ghost" id="fcUndo">Undo</button>
-        <button class="btn sm ghost" id="fcSkip">Skip</button>
-        <label class="opt"><input type="checkbox" id="fcAuto"> Auto-flip after 3s</label>
-      </div>
-      <p class="swipetip">Tap the card to flip · swipe <b>right</b> if you knew it, <b>left</b> if you missed it</p>
-    </div>
-
-    <div class="panel fc-summary" id="fcSummary" hidden>
-      <h2>Session complete</h2>
-      <p class="lead" id="fcSummaryLead"></p>
-      <div class="stats" id="fcStats"></div>
-      <div id="fcMissed"></div>
-      <div class="row">
-        <button class="btn primary" id="fcAgain">Start another session</button>
-        <button class="btn" id="fcReviewMissed">Review the words I missed</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= QUIZ ================= -->
-  <section id="view-quiz" class="view" role="tabpanel">
-    <div class="panel" id="qSetup">
-      <h2>Multiple-choice quiz</h2>
-      <p class="lead">Test yourself the way the SAT and ACT do: pick the word that fits a sentence, or match words and meanings. Answers you miss are flagged for review in Flashcards.</p>
-      <div class="row">
-        <label class="opt">Question type
-          <select class="sel" id="qType">
-            <option value="mixed">Mixed</option>
-            <option value="blank">Fill in the blank (sentence)</option>
-            <option value="d2w">Definition → word</option>
-            <option value="w2d">Word → definition</option>
-          </select>
-        </label>
-        <label class="opt">Questions
-          <select class="sel" id="qCount">
-            <option value="10" selected>10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="50">50</option>
-          </select>
-        </label>
-        <label class="opt">Words
-          <select class="sel" id="qPool">
-            <option value="filtered">All selected words</option>
-            <option value="studied">Words I've studied</option>
-            <option value="missed">Words I've missed</option>
-          </select>
-        </label>
-        <button class="btn primary lg" id="qStart">Start quiz</button>
-      </div>
-      <div class="deckinfo" id="qInfo"></div>
-      <hr class="sep">
-      <div class="row between challenge-row">
-        <div>
-          <h3 class="ch-h">Challenge a friend</h3>
-          <p class="lead" style="margin:0">You take the quiz first, then send a link. Your friend gets the <b>exact same questions</b> and sees who won. No account needed — it works over text or AirDrop.</p>
-        </div>
-        <button class="btn primary" id="chStart">Create a challenge</button>
+      <div class="panel fc-summary" id="fcSummary" hidden>
+        <h2>Session complete</h2><p class="lead" id="fcSummaryLead"></p><div class="stats" id="fcStats"></div><div id="fcMissed"></div>
+        <div class="row"><button class="btn primary" id="fcAgain">Start another session</button><button class="btn" id="fcReviewMissed">Review the words I missed</button></div>
       </div>
     </div>
 
-    <div class="panel" id="qStage" hidden>
-      <div class="q-head">
-        <span id="qProgress">Question 1 of 10</span>
-        <span class="score" id="qScore">Score: 0</span>
-        <button class="btn sm ghost" id="qQuit">Quit</button>
-      </div>
-      <div class="q-type" id="qTypeLbl"></div>
-      <div class="q-prompt" id="qPrompt"></div>
-      <div class="opts" id="qOpts"></div>
-      <div id="qFeedback" hidden></div>
-      <div class="row" style="margin-top:14px;justify-content:flex-end">
-        <button class="btn primary" id="qNext" hidden>Next <kbd>Enter</kbd></button>
-      </div>
-    </div>
-
-    <div class="panel" id="qSummary" hidden>
-      <h2>Quiz results</h2>
-      <div class="bigscore" id="qBig"></div>
-      <p class="lead" id="qSummaryLead"></p>
-      <div id="qMissedWrap"></div>
-      <div class="row" style="margin-top:14px">
-        <button class="btn primary" id="qRetryMissed">Retry missed questions</button>
-        <button class="btn" id="qNew">New quiz</button>
-        <button class="btn" id="chStartQuiz">Challenge a friend</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= MATCH ================= -->
-  <section id="view-match" class="view" role="tabpanel">
-    <div class="panel" id="mSetup">
-      <h2>Matching game</h2>
-      <p class="lead">Match each word to its definition as fast as you can. Tap a word, then its meaning (or the other way around).</p>
-      <div class="row">
-        <label class="opt">Pairs
-          <select class="sel" id="mPairs">
-            <option value="4">4</option>
-            <option value="6" selected>6</option>
-            <option value="8">8</option>
-            <option value="10">10</option>
-          </select>
-        </label>
-        <label class="opt">Words
-          <select class="sel" id="mPool">
-            <option value="filtered">All selected words</option>
-            <option value="studied">Words I've studied</option>
-            <option value="missed">Words I've missed</option>
-          </select>
-        </label>
-        <button class="btn primary lg" id="mStart">Start game</button>
-      </div>
-      <div class="deckinfo" id="mBest"></div>
-    </div>
-    <div class="panel" id="mStage" hidden>
-      <div class="m-head">
-        <span>⏱ <b id="mTimer">0.0s</b></span>
-        <span>Mistakes: <b id="mMistakes">0</b></span>
-        <span>Matched: <b id="mMatched">0</b>/<span id="mTotal">6</span></span>
-        <button class="btn sm ghost" id="mQuit">Quit</button>
-      </div>
-      <div class="m-board">
-        <div class="m-col" id="mWords"></div>
-        <div class="m-col" id="mDefs"></div>
-      </div>
-    </div>
-    <div class="panel" id="mSummary" hidden>
-      <h2>Nice work!</h2>
-      <p class="lead" id="mSummaryLead"></p>
-      <div id="mReview"></div>
-      <div class="row" style="margin-top:14px">
-        <button class="btn primary" id="mAgain">Play again</button>
-        <button class="btn" id="mBack">Change settings</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= WORD LIST ================= -->
-  <section id="view-list" class="view" role="tabpanel">
-    <div class="panel">
-      <div class="row between">
-        <div><h2>Word list</h2><p class="lead" id="listLead">Browse, search, and mark words. Filters in the bar above apply here too.</p></div>
+    <!-- quiz -->
+    <div class="vsub" id="vsub-quiz">
+      <div class="panel" id="qSetup">
+        <h2>Vocabulary quiz</h2>
+        <p class="lead">Pick the word that fits a sentence, or match words and meanings. Answers you miss are flagged for review in Flashcards.</p>
         <div class="row">
-          <button class="btn sm" id="exportCsv">Export CSV</button>
-          <button class="btn sm" id="printList">Print list</button>
+          <label class="opt">Question type<select class="sel" id="qType"><option value="mixed">Mixed</option><option value="blank">Fill in the blank (sentence)</option><option value="d2w">Definition → word</option><option value="w2d">Word → definition</option></select></label>
+          <label class="opt">Questions<select class="sel" id="qCount"><option value="10" selected>10</option><option value="20">20</option><option value="30">30</option><option value="50">50</option></select></label>
+          <label class="opt">Words<select class="sel" id="qPool"><option value="filtered">All selected words</option><option value="studied">Words I've studied</option><option value="missed">Words I've missed</option></select></label>
+          <button class="btn primary lg" id="qStart">Start quiz</button>
+        </div>
+        <div class="deckinfo" id="qInfo"></div>
+        <hr class="sep">
+        <div class="row between challenge-row">
+          <div><h3 class="ch-h">Challenge a friend</h3><p class="lead" style="margin:0">You take the quiz first, then send a link. Your friend gets the <b>exact same questions</b> and sees who won. No account needed — it works over text or AirDrop.</p></div>
+          <button class="btn primary" id="chStart">Create a challenge</button>
         </div>
       </div>
-      <div class="list-tools">
-        <div class="search"><span class="ico">⌕</span><input class="inp" type="search" id="searchBox" placeholder="Search words, definitions, synonyms…" aria-label="Search words"></div>
-        <label class="opt">Sort
-          <select class="sel" id="sortSel">
-            <option value="az">A → Z</option>
-            <option value="tier">Priority (Core first)</option>
-            <option value="status">Progress (weakest first)</option>
-            <option value="recent">Recently studied</option>
-          </select>
-        </label>
-        <label class="opt">Per page
-          <select class="sel" id="pageSize">
-            <option value="50">50</option>
-            <option value="100" selected>100</option>
-            <option value="250">250</option>
-          </select>
-        </label>
-        <button class="btn sm ghost" id="expandAll">Expand all</button>
+      <div class="panel" id="qStage" hidden>
+        <div class="q-head"><span id="qProgress">Question 1 of 10</span><span class="score" id="qScore">Score: 0</span><button class="btn sm ghost" id="qQuit">Quit</button></div>
+        <div class="q-type" id="qTypeLbl"></div><div class="q-prompt" id="qPrompt"></div><div class="opts" id="qOpts"></div><div id="qFeedback" hidden></div>
+        <div class="row" style="margin-top:14px;justify-content:flex-end"><button class="btn primary" id="qNext" hidden>Next <kbd>Enter</kbd></button></div>
       </div>
-      <div class="wl" id="wordList"></div>
-      <div class="pager" id="pager"></div>
+      <div class="panel" id="qSummary" hidden>
+        <h2>Quiz results</h2><div class="bigscore" id="qBig"></div><p class="lead" id="qSummaryLead"></p><div id="qMissedWrap"></div>
+        <div class="row" style="margin-top:14px"><button class="btn primary" id="qRetryMissed">Retry missed questions</button><button class="btn" id="qNew">New quiz</button><button class="btn" id="chStartQuiz">Challenge a friend</button></div>
+      </div>
+    </div>
+
+    <!-- match -->
+    <div class="vsub" id="vsub-match">
+      <div class="panel" id="mSetup">
+        <h2>Matching game</h2><p class="lead">Match each word to its definition as fast as you can. Tap a word, then its meaning.</p>
+        <div class="row">
+          <label class="opt">Pairs<select class="sel" id="mPairs"><option value="4">4</option><option value="6" selected>6</option><option value="8">8</option><option value="10">10</option></select></label>
+          <label class="opt">Words<select class="sel" id="mPool"><option value="filtered">All selected words</option><option value="studied">Words I've studied</option><option value="missed">Words I've missed</option></select></label>
+          <button class="btn primary lg" id="mStart">Start game</button>
+        </div>
+        <div class="deckinfo" id="mBest"></div>
+      </div>
+      <div class="panel" id="mStage" hidden>
+        <div class="m-head"><span>⏱ <b id="mTimer">0.0s</b></span><span>Mistakes: <b id="mMistakes">0</b></span><span>Matched: <b id="mMatched">0</b>/<span id="mTotal">6</span></span><button class="btn sm ghost" id="mQuit">Quit</button></div>
+        <div class="m-board"><div class="m-col" id="mWords"></div><div class="m-col" id="mDefs"></div></div>
+      </div>
+      <div class="panel" id="mSummary" hidden>
+        <h2>Nice work!</h2><p class="lead" id="mSummaryLead"></p><div id="mReview"></div>
+        <div class="row" style="margin-top:14px"><button class="btn primary" id="mAgain">Play again</button><button class="btn" id="mBack">Change settings</button></div>
+      </div>
+    </div>
+
+    <!-- list -->
+    <div class="vsub" id="vsub-list">
+      <div class="panel">
+        <div class="row between"><div><h2>Word list</h2><p class="lead" id="listLead">Browse, search, and mark words. Filters above apply here too.</p></div><div class="row"><button class="btn sm" id="exportCsv">Export CSV</button><button class="btn sm" id="printList">Print list</button></div></div>
+        <div class="list-tools">
+          <div class="search"><span class="ico">⌕</span><input class="inp" type="search" id="searchBox" placeholder="Search words, definitions, synonyms…" aria-label="Search words"></div>
+          <label class="opt">Sort<select class="sel" id="sortSel"><option value="az">A → Z</option><option value="tier">Priority (Core first)</option><option value="status">Progress (weakest first)</option><option value="recent">Recently studied</option></select></label>
+          <label class="opt">Per page<select class="sel" id="pageSize"><option value="50">50</option><option value="100" selected>100</option><option value="250">250</option></select></label>
+          <button class="btn sm ghost" id="expandAll">Expand all</button>
+        </div>
+        <div class="wl" id="wordList"></div><div class="pager" id="pager"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GRAMMAR ================= -->
+  <section id="view-grammar" class="view" role="tabpanel">
+    <div id="grOverview">
+      <div class="panel">
+        <div class="row between"><div><h2>Grammar — Standard English Conventions</h2><p class="lead" id="grLead"></p></div><span class="badge lv-solid">431 verified questions</span></div>
+        <p class="deckinfo" id="grInfo"></p>
+        <div class="row" style="margin-top:6px"><span class="flabel">Weakest right now</span><span id="grWeak" class="row"></span></div>
+        <hr class="sep">
+        <div class="row">
+          <label class="opt">Practice<select class="sel" id="drMode"><option value="weakest">My weakest skills</option><option value="mixed">Mixed — all skills</option><option value="skill">One skill</option><option value="missed">Questions I've missed</option></select></label>
+          <label class="opt" id="drSkillWrap" hidden>Skill<select class="sel" id="drSkill"></select></label>
+          <label class="opt">Questions<select class="sel" id="drCount"><option value="5">5</option><option value="10" selected>10</option><option value="15">15</option><option value="20">20</option></select></label>
+          <label class="opt">Difficulty<select class="sel" id="drDiff"><option value="all">Mixed</option><option value="1">Easier</option><option value="23">Medium and harder</option><option value="3">Hardest only</option></select></label>
+          <button class="btn primary lg" id="drStart">Start practice</button>
+        </div>
+      </div>
+      <div class="panel"><h2>Skills</h2><p class="lead">Tap a skill to practice it. Mastery reflects your recent accuracy, weighted toward harder questions.</p><div class="skillgrid" id="grSkills"></div></div>
+    </div>
+
+    <div class="panel" id="drStage" hidden>
+      <div class="q-head"><span id="drProgress">Question 1 of 10</span><span class="score" id="drScore">Score: 0</span><button class="btn sm ghost" id="drQuit">Quit</button></div>
+      <div class="q-type" id="drSkillLbl"></div>
+      <p class="dr-prompt" id="drPrompt"></p>
+      <div class="q-prompt dr-stem" id="drStem"></div>
+      <div class="opts" id="drOpts"></div>
+      <div id="drFeedback" hidden></div>
+      <div class="row" style="margin-top:14px;justify-content:flex-end"><button class="btn primary" id="drNext" hidden>Next <kbd>Enter</kbd></button></div>
+    </div>
+
+    <div class="panel" id="drSummary" hidden>
+      <h2>Practice results</h2><div class="bigscore" id="drBig"></div><p class="lead" id="drSummaryLead"></p>
+      <div id="drBySkill"></div><div id="drMissedWrap"></div>
+      <div class="row" style="margin-top:14px"><button class="btn primary" id="drAgain">Another set</button><button class="btn" id="drRetryMissed">Retry the ones I missed</button><button class="btn ghost" id="drBack">Back to skills</button></div>
     </div>
   </section>
 
   <!-- ================= PROGRESS ================= -->
   <section id="view-progress" class="view" role="tabpanel">
     <div class="panel">
-      <h2>Your progress</h2>
-      <p class="lead" id="storageNote"></p>
+      <h2>Your progress</h2><p class="lead" id="storageNote"></p>
       <div class="pg-grid" id="pgCards"></div>
-      <hr class="sep">
-      <h3 style="margin:0 0 4px">Progress by tier</h3>
-      <div id="pgTiers"></div>
+      <hr class="sep"><h3 style="margin:0 0 4px">Vocabulary by tier</h3><div id="pgTiers"></div>
       <div class="legend"><span><i class="c-mastered"></i>Mastered</span><span><i class="c-known"></i>Known</span><span><i class="c-learning"></i>Learning</span><span><i class="c-new"></i>Not started</span></div>
-      <hr class="sep">
-      <div class="row between">
-        <div class="streak" id="pgStreak"></div>
-        <div id="pgQuiz" class="small muted"></div>
-      </div>
+      <hr class="sep"><div id="pgSkills"></div>
+      <hr class="sep"><div class="row between"><div class="streak" id="pgStreak"></div><div id="pgQuiz" class="small muted"></div></div>
       <div id="pgPlan" class="notice info" style="margin-top:14px"></div>
       <hr class="sep">
-      <div class="row">
-        <button class="btn" id="exportProgress">Back up progress (JSON)</button>
-        <label class="btn" for="importProgress">Restore from backup</label>
-        <input type="file" id="importProgress" accept="application/json" hidden>
-        <button class="btn danger" id="resetProgress">Reset all progress</button>
-      </div>
+      <div class="row"><button class="btn" id="exportProgress">Back up progress (JSON)</button><label class="btn" for="importProgress">Restore from backup</label><input type="file" id="importProgress" accept="application/json" hidden><button class="btn danger" id="resetProgress">Reset all progress</button></div>
       <p class="small muted" style="margin-top:10px">Progress lives on this device only — nothing is uploaded and no account is needed. Use <b>Back up</b> to move it to another phone or computer.</p>
     </div>
   </section>
 </main>
 
-<nav class="bnav" aria-label="Study modes">
-  <button class="bnav-btn active" data-view="flashcards"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="14" height="12" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v11"/></svg><span>Cards</span></button>
-  <button class="bnav-btn" data-view="quiz"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.3a3 3 0 0 1 5.6 1.2c0 2-2.8 2.4-2.8 4"/><circle cx="12" cy="17.4" r=".6" fill="currentColor"/></svg><span>Quiz</span></button>
-  <button class="bnav-btn" data-view="match"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7.5" height="7.5" rx="1.6"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.6"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.6"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.6"/></svg><span>Match</span></button>
-  <button class="bnav-btn" data-view="list"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg><span>Words</span></button>
+<nav class="bnav" aria-label="Sections">
+  <button class="bnav-btn active" data-view="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5"/><path d="M10 20v-5h4v5"/></svg><span>Home</span></button>
+  <button class="bnav-btn" data-view="vocab"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="14" height="12" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v11"/></svg><span>Vocab</span></button>
+  <button class="bnav-btn" data-view="grammar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"/><path d="m6 16 9.5-9.5a2.1 2.1 0 0 1 3 3L9 19H6z"/></svg><span>Grammar</span></button>
   <button class="bnav-btn" data-view="progress"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V10M10 19V5M16 19v-6M22 19H2"/></svg><span>Progress</span></button>
 </nav>
 
 <footer>
-  <p><b>WordBank Prep</b> — free SAT &amp; ACT vocabulary practice. Words are drawn from the vocabulary commonly found on major SAT/ACT prep lists (Barron's, Kaplan, Princeton Review, Direct Hits, and others) plus the "words in context" vocabulary tested on the current digital SAT and ACT. Tiers: <b>Core</b> = highest-frequency words to master first · <b>Extended</b> = words found on standard prep lists · <b>Advanced</b> = challenging words for top scorers. Words tagged <em>SAT-only</em> are classic hard SAT-list words less likely to matter on the ACT.</p>
+  <p><b>WordBank Prep</b> — free SAT &amp; ACT practice. Vocabulary is drawn from the words commonly found on major SAT/ACT prep lists plus the "words in context" vocabulary tested on the current digital SAT and ACT. Grammar questions are original, written in the tests' format, and independently verified. SAT® is a trademark registered by the College Board; ACT® is a registered trademark of ACT, Inc. Neither is affiliated with nor endorses this product.</p>
   <p>No account, no ads, no tracking. Your progress stays on your device. <button class="linkbtn" id="footerHelp">How it works</button></p>
 </footer>
 
